@@ -64,6 +64,16 @@ export default function EikonHome() {
         {/* Flow field background */}
         {mounted && <NeuralBackground color="#8B5CF6" particleCount={500} trailOpacity={0.06} />}
 
+        {/* Logo background image — semi-transparent, centered */}
+        <div className="absolute inset-0 z-[5] flex items-center justify-center pointer-events-none">
+          <img
+            src="/logo.jpeg"
+            alt=""
+            className="w-full h-full object-cover opacity-[0.12] mix-blend-luminosity scale-110"
+            style={{ objectPosition: "center 30%" }}
+          />
+        </div>
+
         {/* Spotlight gradient overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(139,92,246,0.2),transparent)] pointer-events-none z-10" />
 
